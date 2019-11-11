@@ -50,19 +50,17 @@ var_dump($temperatūros);
 
 
 
-$array = [1,2,3,4,5,6,7,8,9];
+/*$array = [1,2,3,4,5,6,7,8,9]; pataisyta be array*/
 
 
 
-for ($i = 0; $i < count($array); $i++) {
-   $index = $array[$i];
-
-   echo "<br>";
-   for($n=0; $n < $array[$i]; $n++) {
-
-
-    echo($index);
-   	}
+for ($i=0; $i <= 9; $i++) {
+    # code...
+    for ($y=0; $y < $i; $y++) {
+        # code...
+        echo $i;
+    }
+    echo "<br>";
 }
 
 
@@ -267,6 +265,10 @@ Pvz 4 --> [1, [2], [[3]], [[[4]]] ], 5 --> [1, [2], [[3]], [[[4]]], [[[[5]]]] ].
 
 
 
+
+
+
+$array =
 
 
 echo "<br>";
