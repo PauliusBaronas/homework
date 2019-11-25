@@ -9,7 +9,7 @@ if(isset($_POST['user'])) {
 
     /*    GRAZINA I PRADINI PSL*/
 
-    header('Location: index.php');}
+    header('Location: buves.php');}
 
 
 ?>

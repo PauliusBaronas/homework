@@ -38,8 +38,8 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        echo '<script>setTimeout(function(){window.location.replace(buves.php)},1500);</script>';
-       /* header('Location: buves.php');*/
+        echo '<script>setTimeout(function(){window.location.replace("index.php")},1500);</script>';
+       /* header('Location: index.php');*/
 
         if(isset($_SESSION['pics'])) {
             $_SESSION['pics'][] = $_FILES["fileToUpload"]["name"];
