@@ -73,9 +73,9 @@ Sesija turėtų prasidėti (session_start) __construct metode. (edited) */
     {
     array_push($this->log, $var);
     }
-    public function showLog($startpos = 0)
+    public function showLog($startpos = 4)
     {
-    return $part = array_slice($this->log, $startpos);
+    return $part = array_slice($this->log, "-".$startpos);
 
     }
     public function deleteLog($startpos = 0)
