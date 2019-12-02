@@ -42,7 +42,7 @@
 			
 			<button type="submit" class="btn btn-primary mr-2">Filter</button>
 			<a href="./index.php" class="btn btn-danger mr-2">Clear</a>
-			<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" >Add new</button>
+			<button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal" >Add new</button>
 		</form>
 		<!-- Modal -->
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
