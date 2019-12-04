@@ -11,7 +11,7 @@ class Pizza {
     this.sliceCount = 6
     this.sliceSize = 80
 
-    this.width = this.height = this.canvas.height = this.canvas.width = this.sliceSize * 2 + 50
+    this.width = this.height = this.canvas.height = this.canvas.width = this.sliceSize * 2 + 200
     this.center = this.height / 2 | 0
 
     this.sliceDegree = 360 / this.sliceCount
