@@ -26,13 +26,13 @@ session_start();
 <body>
         <div class="container">
             <form action="maths.php" method="POST">
-            <div class="row border border-primary text-danger font row justify-content-center">
+            <div class="row border border-secondary rounded text-danger font row justify-content-center">
                 <div>
                 <h1> Daugiau niekada nepermokėkite už picą </h1>
                 </div>
             </div>
-            <div class="row border border-primary">
-                <div class="col-sm font border border-primary">
+            <div class="row border border-secondary rounded">
+                <div class="col-sm font border border-secondary rounded ">
                     <h3> Mažosios picos </h3>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Picos pavadinimas</label>
@@ -49,7 +49,7 @@ session_start();
                             <input type="text" class="form-control" id="validationDefault02" value="cm" required name="small_uom">
                         </div>
                         <div class="input-group mb-3">
-                        <div class="col-12 border border-primary">
+                        <div class="col-12">
                             Kaina
                         </div>
                         <div class="input-group-prepend">
@@ -66,20 +66,40 @@ session_start();
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="small_save" value="small_save">
                         <label class="form-check-label" for="exampleCheck1">Išsaugoti picą tolimesnei analizei</label>
                     </div>
+                    <label for="validationCustom04">Išsaugotų picų sąrašas</label>
+                      <select class="custom-select" id="validationCustom04" >
+                        <option selected disabled value="">Pasirinkite...</option>
+                        <option>...</option>
+                      </select>
                 </div>
-                <div class="col-sm border border-primary purple">
-                    <div class="col-sm border border-primary">
-                    <div class="col-12 text-center">
-                        <h3> <?php echo "mažų picų plotas: " . $_SESSION['small_area'];  ?> </h3>
-                        <h3> <?php echo "didelių picų plotas: " . $_SESSION['large_area'];  ?> </h3> 
-                        <h3> <?php echo "už 1 Eur gaunate tiek ploto mažos picos: " . $_SESSION['small_area_price'];  ?> </h3> 
-                        <h3> <?php echo "už 1 Eur gaunate tiek ploto didelės picos: " . $_SESSION['large_area_price'];  ?> </h3> 
-                        <button type="submit" class="btn btn-primary mr-2"> Skaičiuoti </button>
+                <div class="col-sm border border-secondary bg-light ">
+                    <div class="col-sm ">
+                    <div class="col-12 text-center font row ">
+                        <h4> <?php if(isset($_SESSION['small_area'])) 
+                        {
+                            echo "mažų picų plotas: " . $_SESSION['small_area']; 
+                        } ?> </h4>
+                        <h4> <?php if(isset($_SESSION['large_area'])) {
+                            echo "didelių picų plotas: " . $_SESSION['large_area']; 
+                            } ?> </h4> 
+                        <h4> <?php if(isset($_SESSION['small_area_price'])) {
+                            echo "už 1 Eur gaunate tiek ploto mažos picos: " . $_SESSION['small_area_price'];
+                            }  ?> </h4> 
+                        <h4> <?php if(isset($_SESSION['large_area_price'])) {
+                            echo "už 1 Eur gaunate tiek ploto didelės picos: " . $_SESSION['large_area_price'];
+                            }  ?> </h4> 
+                        <h4> <?php if(isset($_SESSION['result'])) {
+                            echo $_SESSION['result'];
+                            }  ?> </h4> 
+
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-primary mr-2"> Skaičiuoti </button>
                     </div>
                     <canvas id="pizza"> <script src="js.js"></script> </canvas>
                 </div>
                 </div>
-                <div class="col-sm font border border-primary">
+                <div class="col-sm font border border-secondary rounded">
                     <h3> Didžioji pica </h3>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Picos pavadinimas</label>
@@ -95,7 +115,7 @@ session_start();
                             <label for="validationDefault02">matavimo vienetas</label>
                             <input type="text" class="form-control" id="validationDefault02" value="cm" name="large_uom">
                         </div>
-                        <div class=" col-12 border border-primary">
+                        <div class=" col-12">
                             Kaina
                         </div>
                         <div class="input-group mb-3">
@@ -113,6 +133,11 @@ session_start();
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" value="large_save" name="large_save">
                         <label class="form-check-label" for="exampleCheck1">Išsaugoti picą tolimesnei analizei</label>
                     </div>
+                    <label for="validationCustom04">Išsaugotų picų sąrašas</label>
+                      <select class="custom-select" id="validationCustom04" >
+                        <option selected disabled value="">Pasirinkite...</option>
+                        <option>...</option>
+                      </select>
                 </div>
 
             </div>
