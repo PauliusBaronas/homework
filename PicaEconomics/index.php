@@ -54,7 +54,7 @@ session_start();
                         </div>
                         <div class="input-group-prepend">
                             <div class="input-group-text">Eur</div>
-                            <input type="number" class="form-control" id="inlineFormInputGroup" placeholder="9.99" name="small_price">
+                            <input type="decimal" class="form-control" id="inlineFormInputGroup" placeholder="9.99" name="small_price">
                         </div>
                         </div>
                         <div class="col-6 mb-3">
@@ -122,7 +122,7 @@ session_start();
                           <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Eur</span>
                           </div>
-                          <input type="number" class="form-control" placeholder="9.99" aria-label="Username" aria-describedby="basic-addon1" name="large_price">
+                          <input type="decimal" class="form-control" placeholder="9.99" aria-label="Username" aria-describedby="basic-addon1" name="large_price">
                         </div>
                         <div class="col-6 mb-3">
                             <label for="validationDefault01"> Picų kiekis </label>
